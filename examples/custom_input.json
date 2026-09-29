@@ -1,0 +1,170 @@
+{
+  "applyEuaImpact": true,
+  "applyFuelEuImpact": true,
+  "bunker": {
+    "co2Price": 90.0,
+    "hsfo": {
+      "price": 460,
+      "robStart": 0
+    },
+    "lsmgo": {
+      "price": 790,
+      "robStart": 0
+    },
+    "rewardFactor": 1.0,
+    "vlsfo": {
+      "price": 610,
+      "robStart": 0
+    }
+  },
+  "cargo": {
+    "demurrage": 0,
+    "despatch": 0,
+    "quantity": 50000,
+    "rate": 32,
+    "rateType": "mt",
+    "tcCommission": 3.75,
+    "voyageCommission": 2.5
+  },
+  "extraTime": {
+    "atSeaDays": 0.25,
+    "atSeaSpeedContext": "EV",
+    "canal1Days": 0,
+    "canal2Days": 0,
+    "idlePortDays": 0.5
+  },
+  "hireRate": 16000.0,
+  "misc": {
+    "canalCost1": 0,
+    "canalCost2": 0,
+    "extraFees": 1200,
+    "extraInsurance": 800,
+    "miscCost": 5000
+  },
+  "netBB": 0,
+  "sequence": [
+    {
+      "distance": 0,
+      "ecaDistance": 0,
+      "ecaTime": 0,
+      "expDa": 10000,
+      "extraTimeHours": 0,
+      "id": 1,
+      "isEuEea": false,
+      "nonEcaTime": 0,
+      "operation": "load",
+      "port": "Santos",
+      "portDays": 2.0,
+      "portFuelType": "vlsfo",
+      "portUnloc": "BRSSZ",
+      "quantity": 50000,
+      "seaTime": 0,
+      "turnTimeHours": 6
+    },
+    {
+      "distance": 4200,
+      "ecaDistance": 250,
+      "ecaTime": 0.8,
+      "expDa": 18000,
+      "extraTimeHours": 4,
+      "id": 2,
+      "isEuEea": true,
+      "nonEcaTime": 11.7,
+      "operation": "disch",
+      "port": "Rotterdam",
+      "portDays": 3.0,
+      "portFuelType": "lsmgo",
+      "portUnloc": "NLRTM",
+      "quantity": 50000,
+      "seaTime": 12.5,
+      "turnTimeHours": 8
+    }
+  ],
+  "vessel": {
+    "dwt": 82000,
+    "ecoConsumption": {
+      "ae": {
+        "ballast": 1.2,
+        "discharge": 2.0,
+        "idle": 0.7,
+        "laden": 1.4,
+        "load": 1.8
+      },
+      "aeScrubber": {
+        "ballast": 1.4,
+        "discharge": 2.2,
+        "idle": 0.8,
+        "laden": 1.6,
+        "load": 2.0
+      },
+      "hsfo": {
+        "ballast": 18,
+        "canal": 4,
+        "discharge": 3.2,
+        "idle": 1.5,
+        "laden": 24,
+        "load": 3
+      },
+      "lsmgo": {
+        "ballast": 2,
+        "canal": 0,
+        "discharge": 0.9,
+        "idle": 0.5,
+        "laden": 2.5,
+        "load": 0.8
+      },
+      "vlsfo": {
+        "ballast": 17,
+        "canal": 3.8,
+        "discharge": 3,
+        "idle": 1.4,
+        "laden": 23,
+        "load": 2.8
+      }
+    },
+    "fullConsumption": {
+      "ae": {
+        "ballast": 1.2,
+        "discharge": 2.0,
+        "idle": 0.7,
+        "laden": 1.4,
+        "load": 1.8
+      },
+      "aeScrubber": {
+        "ballast": 1.4,
+        "discharge": 2.2,
+        "idle": 0.8,
+        "laden": 1.6,
+        "load": 2.0
+      },
+      "hsfo": {
+        "ballast": 18,
+        "canal": 4,
+        "discharge": 3.2,
+        "idle": 1.5,
+        "laden": 24,
+        "load": 3
+      },
+      "lsmgo": {
+        "ballast": 2,
+        "canal": 0,
+        "discharge": 0.9,
+        "idle": 0.5,
+        "laden": 2.5,
+        "load": 0.8
+      },
+      "vlsfo": {
+        "ballast": 17,
+        "canal": 3.8,
+        "discharge": 3,
+        "idle": 1.4,
+        "laden": 23,
+        "load": 2.8
+      }
+    },
+    "hasScrubber": true,
+    "name": "Demo Vessel",
+    "speedProfile": "eco",
+    "type": "bulk_carrier"
+  }
+}
