@@ -84,13 +84,13 @@ export default function Home() {
       <header className="site-header">
         <div className="nav-wrap">
           <Logo />
-          <nav className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
+          <nav id="primary-navigation" className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
             {["Solutions", "Markets", "About", "Insights", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</a>
             ))}
           </nav>
           <a className="nav-cta" href="#contact">Contact us <ArrowRight size={15} /></a>
-          <button className="menu-button" aria-label={menuOpen ? "Close menu" : "Open menu"} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
+          <button type="button" className="menu-button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} aria-controls="primary-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
         </div>
       </header>
 

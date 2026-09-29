@@ -9,3 +9,54 @@
  .hero-art{background-image:url('/nauticalmove-routes.png')}
  .tally-section{background:#e8eef0;padding:105px 0 115px}.tally-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:50px;margin-bottom:42px}.tally-heading h2{font-size:clamp(42px,5vw,70px);line-height:1.03;letter-spacing:-.07em;font-weight:600;margin:0}.tally-heading h2 span{color:var(--cyan-dark)}.tally-heading>p{max-width:320px;color:var(--muted);font-size:15px;line-height:1.7;margin:0 0 6px}.tally-frame{background:white;border:1px solid #c9d8dc;box-shadow:0 20px 60px rgba(12,36,47,.1);overflow:hidden;min-height:760px}.tally-frame iframe{display:block;width:100%;height:760px;border:0;background:white}@media (max-width:900px){.tally-section{padding:85px 0 90px}.tally-heading{display:block}.tally-heading>p{margin-top:22px}.tally-frame{min-height:820px}.tally-frame iframe{height:820px}}@media (max-width:520px){.tally-frame{min-height:900px}.tally-frame iframe{height:900px}}
  .tally-frame{min-height:640px}.tally-frame iframe{height:640px}@media (max-width:900px){.tally-frame{min-height:700px}.tally-frame iframe{height:700px}}@media (max-width:520px){.tally-frame{min-height:760px}.tally-frame iframe{height:760px}}
+
+/* Keep navigation and the connected-market flow comfortable on narrow screens. */
+@media (max-width: 1100px) and (min-width: 901px) {
+  .flow-line {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 18px 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-button {
+    min-width: 44px;
+    min-height: 44px;
+    display: grid;
+    place-items: center;
+  }
+
+  .nav-links a {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-wrap {
+    gap: clamp(16px, 5vw, 24px);
+  }
+
+  .logo-image {
+    width: clamp(142px, 48vw, 180px);
+  }
+
+  .hero-art-overlay {
+    background: linear-gradient(90deg, rgba(7, 19, 30, 0.94), rgba(7, 19, 30, 0.8));
+  }
+
+  h1 {
+    font-size: clamp(42px, 12vw, 48px);
+  }
+
+  .hero-meta {
+    flex-wrap: wrap;
+    row-gap: 9px;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 145px;
+  }
+}
