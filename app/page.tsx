@@ -8,7 +8,6 @@ import {
   ChevronDown,
   Compass,
   Container,
-  ExternalLink,
   Globe2,
   Menu,
   Network,
@@ -56,12 +55,6 @@ const audiences = [
   ["Maritime Analysts", "Work from a connected view of vessels, cargoes and fixtures."],
 ];
 
-const insightCards = [
-  ["Voyage Economics", "Sample insight: The commercial anatomy of a voyage estimate"],
-  ["Cargo Flows", "Sample insight: Reading the signals in port-to-port movement"],
-  ["Tanker Markets", "Sample insight: A framework for comparing tanker segments"],
-];
-
 function AnchorButton({ children, href, secondary = false }: { children: React.ReactNode; href: string; secondary?: boolean }) {
   return <a className={secondary ? "button button-secondary" : "button"} href={href}>{children}<ArrowRight size={16} /></a>;
 }
@@ -85,7 +78,7 @@ export default function Home() {
         <div className="nav-wrap">
           <Logo />
           <nav id="primary-navigation" className={menuOpen ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
-            {["Solutions", "Markets", "About", "Insights", "Contact"].map((item) => (
+            {["Solutions", "Markets", "About", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}</a>
             ))}
           </nav>
@@ -125,13 +118,11 @@ export default function Home() {
 
       <section className="audience-section" id="about"><div className="page-width"><div className="section-label light">06 / Built for the people moving markets</div><div className="audience-heading"><h2>Built for maritime<br /><span>commercial teams.</span></h2><p>nauticalmove is a maritime technology and intelligence company focused on making commercial data more accessible, connected and actionable.</p></div><div className="audience-grid">{audiences.map(([title, text], i) => <div className="audience-item" key={title}><span className="audience-index">0{i + 1}</span><div><h3>{title}</h3><p>{text}</p></div><ArrowRight size={18} /></div>)}</div></div></section>
 
-      <section className="insights-section page-width" id="insights"><div className="section-label">07 / Insights</div><div className="insights-heading"><h2>Ideas for a market<br /><span>in motion.</span></h2><a className="text-link" href="#contact">View all insights <ExternalLink size={15} /></a></div><div className="insights-grid">{insightCards.map(([category, title], i) => <article className="insight-card" key={title}><div className={`insight-art art-${i + 1}`}><span>{i === 0 ? "VOYAGE / 01" : i === 1 ? "FLOW / 02" : "MARKET / 03"}</span><div className="mini-wave" /></div><p className="eyebrow">{category}</p><h3>{title}</h3><a className="card-link" href="#contact">Read sample <ArrowRight size={15} /></a></article>)}</div></section>
+      <section className="about-strip"><div className="page-width about-strip-inner"><div><div className="section-label light">07 / Our focus</div><h2>Understanding maritime<br /><span>commerce through data.</span></h2></div><div className="about-copy"><p><strong>Mission</strong> To make maritime commercial intelligence more accessible, connected and actionable.</p><p><strong>Vision</strong> To build a connected intelligence layer for global maritime commerce.</p></div></div></section>
 
-      <section className="about-strip"><div className="page-width about-strip-inner"><div><div className="section-label light">08 / Our focus</div><h2>Understanding maritime<br /><span>commerce through data.</span></h2></div><div className="about-copy"><p><strong>Mission</strong> To make maritime commercial intelligence more accessible, connected and actionable.</p><p><strong>Vision</strong> To build a connected intelligence layer for global maritime commerce.</p></div></div></section>
+      <section className="contact-section page-width" id="contact"><div className="contact-grid"><div><div className="section-label">08 / Start a conversation</div><h2>Let&apos;s talk maritime <span>intelligence.</span></h2><p>Interested in learning more about nauticalmove and our maritime intelligence capabilities? Get in touch with our team.</p><div className="contact-note"><span className="status-dot" /> We&apos;ll get back to you with the right starting point.</div></div><div className="tally-frame contact-tally-frame"><iframe src="https://tally.so/r/WOx6RR?transparentBackground=1&hideTitle=1" title="nauticalmove enquiry form" loading="lazy" /></div></div></section>
 
-      <section className="contact-section page-width" id="contact"><div className="contact-grid"><div><div className="section-label">09 / Start a conversation</div><h2>Let&apos;s talk maritime <span>intelligence.</span></h2><p>Interested in learning more about nauticalmove and our maritime intelligence capabilities? Get in touch with our team.</p><div className="contact-note"><span className="status-dot" /> We&apos;ll get back to you with the right starting point.</div></div><div className="tally-frame contact-tally-frame"><iframe src="https://tally.so/r/aQ72Dv?transparentBackground=1&hideTitle=1" title="nauticalmove enquiry form" loading="lazy" /></div></div></section>
-
-      <footer className="site-footer"><div className="page-width footer-top"><div><Logo /><p>Maritime commercial intelligence.</p></div><div className="footer-links">{["Solutions", "Markets", "About", "Insights", "Contact"].map((item) => <a key={item} href={`#${item.toLowerCase()}`}>{item}</a>)}</div></div><div className="page-width footer-bottom"><span>© 2026 nauticalmove. All rights reserved.</span><span>Global maritime intelligence</span></div></footer>
+      <footer className="site-footer"><div className="page-width footer-top"><div><Logo /><p>Maritime commercial intelligence.</p></div><div className="footer-links">{["Solutions", "Markets", "About", "Contact"].map((item) => <a key={item} href={`#${item.toLowerCase()}`}>{item}</a>)}</div></div><div className="page-width footer-bottom"><span>© 2026 nauticalmove. All rights reserved.</span><span>Global maritime intelligence</span></div></footer>
     </main>
   );
 }

@@ -42,7 +42,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/nauticalmove-favicon.svg?v=2" type="image/svg+xml" />
+        <link rel="icon" href="/nauticalmove-favicon.svg?v=3" type="image/svg+xml" />
       </head>
       <body>{children}</body>
     </html>
