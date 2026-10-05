@@ -1,35 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteTitle = "nauticalmove | Maritime Commercial Intelligence";
+const siteTitle = "NauticalMove | Data & Analytics";
 const siteDescription =
   "Maritime commercial intelligence for better decisions across dry bulk and tanker markets.";
 const shareImage = "/opengraph-image";
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   metadataBase: new URL("https://www.nauticalmove.com"),
-  title: siteTitle,
-  description:
-    "nauticalmove provides maritime commercial intelligence across voyage estimation, cargo flows and fixtures for dry bulk and tanker markets.",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: siteTitle,
-    description: siteDescription,
-    url: "https://www.nauticalmove.com/",
-    siteName: "nauticalmove",
-    images: [
-      {
-        url: shareImage,
-        width: 1200,
-        height: 630,
-        alt: "nauticalmove maritime commercial intelligence across global markets",
-        type: "image/png",
-      },
-    ],
-=======
   title: { default: "NauticalMove | Data & Analytics", template: "%s | NauticalMove" },
   description:
     "Dry Bulk and Tanker tools for voyage calculations, cargo flows and fixture data.",
@@ -37,8 +15,9 @@ export const metadata: Metadata = {
     title: "NauticalMove | Data & Analytics",
     description:
       "Dry Bulk and Tanker tools for voyage calculations, cargo flows and fixture data.",
->>>>>>> 9b329b8 (update content)
     type: "website",
+    siteName: "NauticalMove",
+    images: [{ url: shareImage, width: 1200, height: 630, alt: "NauticalMove Dry Bulk and Tanker tools" }],
   },
   twitter: {
     card: "summary_large_image",
