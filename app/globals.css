@@ -50,8 +50,10 @@ h2{ text-wrap:balance }
 .market-page-card h2{font-size:36px;line-height:1.15;letter-spacing:-.04em}
 .market-page-card>p{margin:24px 0 30px;min-height:50px}
 .market-page-card>a{border-top:1px solid rgba(255,255,255,.18);padding-top:20px}
-.insight-page-card{min-height:390px}
+.insight-page-card{min-height:220px;padding:28px}
 .insight-page-card>h2{min-height:54px}
+.insight-page-card>p,.insight-page-card>h2,.insight-page-card>span{margin-left:0;margin-right:0}
+.insight-page-card>p{margin-top:0}
 .insight-page-card>a{margin-top:auto}
 .principles{padding-bottom:var(--section-space);grid-template-columns:repeat(3,minmax(0,1fr))}
 .principles h2{margin-top:32px}
