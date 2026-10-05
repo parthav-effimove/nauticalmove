@@ -7,6 +7,7 @@ const siteDescription =
 const shareImage = "/opengraph-image";
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   metadataBase: new URL("https://www.nauticalmove.com"),
   title: siteTitle,
   description:
@@ -28,6 +29,15 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
+=======
+  title: { default: "NauticalMove | Data & Analytics", template: "%s | NauticalMove" },
+  description:
+    "Dry Bulk and Tanker tools for voyage calculations, cargo flows and fixture data.",
+  openGraph: {
+    title: "NauticalMove | Data & Analytics",
+    description:
+      "Dry Bulk and Tanker tools for voyage calculations, cargo flows and fixture data.",
+>>>>>>> 9b329b8 (update content)
     type: "website",
   },
   twitter: {

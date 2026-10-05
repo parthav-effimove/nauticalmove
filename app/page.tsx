@@ -1,5 +1,8 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight, BarChart3, Compass, Network, Ship } from "lucide-react";
+import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
+<<<<<<< HEAD
 import { FormEvent, useState } from "react";
 import {
   ArrowDown,
@@ -129,4 +132,15 @@ export default function Home() {
 
 function MarketCard({ type, code, segments, cargo }: { type: string; code: string; segments: string[]; cargo: string[] }) {
   return <article className="market-card"><div className="market-card-head"><div><span className="eyebrow">Market</span><h3>{type}</h3></div><span className="market-code">{code}</span></div><div className="market-card-body"><div><span className="mini-label">Vessel segments</span><div className="pill-list">{segments.map((segment) => <span key={segment}>{segment}</span>)}</div></div><div><span className="mini-label">Cargo examples</span><div className="pill-list">{cargo.map((item) => <span key={item}>{item}</span>)}</div></div></div><div className="market-card-foot"><span>Commercial coverage</span><ArrowRight size={16} /></div></article>;
+=======
+const tools = [["Voyage Estimator", "Calculate voyage returns and break-even freight rates with integrated data.", Compass, "/solutions#estimator"], ["Trade Flows", "Explore trade patterns by commodity and port.", Network, "/solutions#trade-flows"], ["Fixtures", "Search commercial data and explore fixture history.", BarChart3, "/solutions#fixtures"]] as const;
+
+export default function Home() {
+  return <main><SiteHeader /><section className="hero home-hero"><div className="hero-art" aria-hidden="true"><div className="hero-art-overlay" /><div className="hero-point point-one" /><div className="hero-point point-two" /></div><div className="hero-content page-width"><div className="kicker"><span className="status-dot" /> Live AIS-derived data</div><h1>NauticalMove <em>chartering</em> tools.</h1><p className="hero-copy">Compare voyages, explore cargo flows and search fixtures with shipping data.</p><div className="hero-actions"><Link className="button" href="/solutions">All Tools <ArrowRight size={16} /></Link><Link className="button button-secondary" href="/markets">Market data <ArrowRight size={16} /></Link></div><div className="hero-meta"><span>LIVE AIS DATA</span><span className="meta-rule" /><span>DRY BULK + TANKER</span></div></div></section>
+    <section className="home-intro page-width"><div className="section-label">Data &amp; Analytics</div><div className="split-intro"><h2>Vessel and <span>commodity flows.</span></h2><p>Explore vessel movements and commodity demand for informed chartering decisions.</p></div></section>
+    <section className="solution-preview page-width">{tools.map(([title, description, Icon, href], index) => <article className="solution-preview-card" key={title}><div><span className="card-number">0{index + 1}</span><Icon size={25} strokeWidth={1.4} /></div><h3>{title}</h3><p>{description}</p><Link href={href}>Read more <ArrowRight size={15} /></Link></article>)}</section>
+    <section className="market-band"><div className="page-width market-band-grid"><div><div className="section-label light">By Market</div><h2>Dry Bulk and <span>Tanker.</span></h2></div><div><p>Explore supply and demand across Dry Bulk and Tanker markets.</p><Link className="text-link light-link" href="/markets">Read more <ArrowRight size={15} /></Link></div></div></section>
+    <section className="operating-model page-width"><div className="section-label">Data &amp; APIs</div><div className="operating-head"><h2>Vessels, cargoes, routes and <span>market data.</span></h2><p>Access ports, positions, cargoes, bunker prices, fixtures, vessels and indices via APIs.</p></div><div className="operating-flow">{["Vessels", "Cargoes", "Ports", "Fixtures", "Bunker prices", "Indices"].map((item, i) => <div key={item}><span>{i === 0 ? <Ship size={18} /> : `0${i + 1}`}</span><strong>{item}</strong></div>)}</div></section>
+    <section className="home-cta"><div className="page-width"><div><div className="section-label light">Contact Us</div><h2>Access <span>market analytics.</span></h2></div><Link className="button" href="/company#enquiry">Contact Us <ArrowRight size={16} /></Link></div></section><SiteFooter /></main>;
+>>>>>>> 9b329b8 (update content)
 }
